@@ -19,12 +19,14 @@ namespace ConsoleApplication
         /// </summary>
         public static void Main()
         {
+            /*
             for(int i = 1; i <= 100; i++)
             {
                 var train = new Train("trenes");
                 train.StartEngines();
                 Console.WriteLine($"La cantidad de objetos creados son: {Train.count}");
             }
+            */
             //Console.WriteLine("Hello World!");
 
             Train t1 = new Train("Last Train To London");

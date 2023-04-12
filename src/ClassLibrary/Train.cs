@@ -30,7 +30,7 @@ namespace ClassLibrary
         ~Train()
         {
             Train.count --;
-            Console.WriteLine("El objeto de destruyo");
+            Console.WriteLine("El objeto se destruyo");
         }
        
         /// <summary>
