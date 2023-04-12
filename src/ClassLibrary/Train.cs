@@ -13,6 +13,26 @@ namespace ClassLibrary
     /// </summary>
     public class Train
     {
+        //private int count {get; set;} ** No me deja ponerle metodos de acceso
+        private string Id {get; set;}
+        
+        public static int count = 0;
+
+        //public int count {get; set;} ** Ni antes ni despues de asignarle valor a la variable
+        
+        public Train(string trenes)
+        {
+            Train.count ++;
+            this.Id = trenes;
+            Console.WriteLine("Se creo un nuevo objeto");
+        }
+        
+        ~Train()
+        {
+            Train.count --;
+            Console.WriteLine("El objeto de destruyo");
+        }
+       
         /// <summary>
         /// Obtiene un valor que indica si las maquinas del tren han sido encendidas o no.
         /// </summary>
@@ -34,7 +54,7 @@ namespace ClassLibrary
             }
 
             this.IsEngineStarted = true;
-            Console.Write("Engines on");
+            //Console.Write("Engines on");
             return true;
         }
 
